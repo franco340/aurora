@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = `var a = 'hola' + ' mundo'`;
+        var z = `algo();`;
+        console.log(eval(x));
+        if (/var/g) {
+            let a = x.match(/\b(?!var)\w+\b/g);
+            console.log(a);
+            let vars = [2];
+            console.log(isNaN(Number(a[1])))
+            if (!isNaN(Number(a[1])) && !/\btrue|false\b/.test(a[1])){
+                console.log('is number')
+                vars[a[0]] = Number(a[1]);
+            } else if (isNaN(Number(a[1])) && !/\btrue|false\b/.test(a[1])) {
+                console.log('is String')
+                vars[a[0]] = a[1].toString();
+            } else if (isNaN(Number(a[1])) && /\btrue|false\b/.test(a[1])) {
+                console.log('is boolean')
+                if (a[1] == 'true') {
+                    vars[a[0]] = true;
+                } else if (a[1] == 'false') {
+                    vars[a[0]] = false;
+                }
+            }
+            console.log(typeof(vars[a[0]]))
+            console.log(vars['a'])
+        }
+        var y = "aseguro seguro unidad usado"
+        //console.log(y.match(/(?=a)\w+/g))
+    </script>
+</body>
+</html>

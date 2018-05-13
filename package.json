@@ -1,0 +1,29 @@
+{
+  "name": "aurora",
+  "version": "1.0.0",
+  "description": "webapp con node js sin frameworks",
+  "main": "Main.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1",
+    "mysql": "^2.15.0",
+    "popper.js": "^1.14.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franco698/aurora.git"
+  },
+  "author": "F. Franco Carvajal Arias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/franco698/aurora/issues"
+  },
+  "homepage": "https://github.com/franco698/aurora#readme"
+}
